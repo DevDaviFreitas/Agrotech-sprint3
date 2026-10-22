@@ -1,14 +1,101 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Agrotech</title>
 
     <link rel="stylesheet" href="../css/styles.css">
-    
+    <link rel="stylesheet" href="../css/login.css">
+
+
 </head>
+
 <body>
-    
+
+    <header class="header">
+        <h1 class="logo">AGROTECH | <span class="brasil">BRASIL</span></h1>
+        <nav class="nav">
+            <ul class="menu">
+                <li><a href="index.html" class="ativo">Principal</a></li>
+                <li><a href="produtos.html">Produtos</a></li>
+                <li><a href="faleConosco.html">Fale Conosco</a></li>
+            </ul>
+        </nav>
+    </header>
+
+
+    <main>
+        <div class="hero">
+            <div class="hero-content">
+                <span class="bem-vindo">BEM-VINDO DE VOLTA</span>
+                <h1>Entre e encontre quem está <span class="destaque">perto</span> de você.</h1>
+                <ul>
+                    <li>Produtorem encontram restaurantes e mercados da região</li>
+                    <li>Compradores veem produtores e excedentes disponíveis</li>
+                    <li>Venda e compra direta, sem intermediários</li>
+                </ul>
+
+            </div>
+        </div>
+
+        <div class="area-cadastro">
+            <h2>Entrar</h2>
+            <p class="notify">Acesse sua conta para anunciar ou demonstrar interesse.</p>
+
+            <section class="formulario-cadastro">
+                <form action="">
+
+
+
+                    <div class="email-usuario">
+                        <label for="email-usuario">E-mail <span class="obrigatorio">*</span></label>
+                        <input type="email" name="email-usuario" id="email-usuario" required
+                            placeholder="Digite seu e-mail">
+                    </div>
+
+                    <div class="senha-usuario">
+                        <label for="senha-usuario">Senha <span class="obrigatorio">*</span></label>
+                        <input type="password" name="senha-usuario" id="senha-usuario" required minlength="6"
+                            placeholder="Digite sua senha">
+                    </div>
+
+                    <div class="check-container">
+                        <input name="mostrar-senha" id="mostrar-senha" type="checkbox">
+                        <label for="mostrar-senha">Mostrar senha</label>
+                    </div>
+
+
+                    <button type="submit">Entrar</button>
+                    <p class="login-p">Ainda não tem conta? <a href="cadastro.html">Cadastrar-se</a></p>
+
+                </form>
+            </section>
+
+            <div class="demo">
+                <div class="demo-top">
+                    <h5 class="demo-title">Contas de demonstração</h5>
+                    <p class="demo-password">(senha: demo123)</p>
+                </div>
+
+                <div class="demo-bottom">
+                    <p>produtor@demo.com</p>
+                    <p>restaurante@demo.com</p>
+                </div>
+
+            </div>
+
+
+
+        </div>
+
+
+
+    </main>
+
+
+
 </body>
+
 </html>
