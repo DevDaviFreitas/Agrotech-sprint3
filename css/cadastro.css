@@ -19,15 +19,20 @@
 
 }
 
+body {
+    height: 100%;
+}
+
 
 header {
     z-index: 0;
     background-color: var(--branco);
-    height: 8dvh;
+    min-height: 7dvh ;
     display: flex;
     align-items: center;
     padding-left: 4.5%;
-    border-bottom: .2px solid var(--Verde-suave);
+    border-bottom: 0.1px solid rgb(224, 222, 222);
+
     h3 {
         color: var(--Verde-principal);
         font-size: 1.8rem;
@@ -36,7 +41,9 @@ header {
 
 main {
     display: grid;
-    grid-template-columns: repeat(2, 2fr);
+    grid-template-columns: 4fr 6fr;
+    min-height: calc(100dvh - 7dvh);
+    width: 100%;
 }
 
 .hero {
@@ -45,8 +52,8 @@ main {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    height: 100dvh;
-    width: 40dvw;
+    width: 100%;
+    
     background-color: var(--Verde-principal);
 
 
@@ -77,37 +84,412 @@ main {
 }
 
 .hero-content li::marker {
-  color: var(--Amarelo-destaque); 
+    color: var(--Amarelo-destaque);
 }
 
 /* Lado direito da aba cadastro, formulario */
 
 .area-cadastro {
-    padding-top: 7rem;
-    
+    padding-top: 1rem;
+    width: 100%;
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
-    height: 100dvh;
-    width: 59dvw;
+    align-items: center;
+    padding: 4rem 2rem;
+    
     background-color: var(--cor-box);
     z-index: 2;
+}
+
+.area-cadastro h2, 
+.notify {
+    width: 100%;
+    max-width: 650px; 
+    text-align: left;  
+    margin-left: 0;
 }
 
 .area-cadastro h2 {
     color: var(--Verde-principal);
     font-size: 1.9rem;
-    padding-left: 17rem;
+    
 }
 
-.area-cadastro p {
+.notify {
     color: gray;
-    padding-left: 17rem;
+    
 }
+
+.area-cadastro section {
+    max-width: 650px;
+    width: 100%;
+    margin-top: 2%;
+    
+}
+
 
 
 .formulario-cadastro {
-   
-
+    border: 0.1px solid rgb(224, 222, 222);
+    border-radius: 10px;
+    height: 88%;
+    padding-inline: 4%;
+    padding-block: 3%;
     background-color: var(--branco);
+    max-width: 650px;
+    width: 100%;
+}
+
+.obrigatorio {
+    color: var(--Cor-ERRO);
+    font-size: 1.1rem;
+}
+
+form {
+    
+    height: 100%;
+    width: 100%;
+}
+
+label {
+    color: var(--Verde-secundario);
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+.opcoes-container {
+  display: flex;
+  gap: 12px;
+  margin-top: 9px;
+}
+
+.opcao-card {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 14px 20px;
+  background-color: var(--cor-box); 
+  border: 0.1px solid rgb(224, 222, 222);  
+  border-radius: 12px;       
+  cursor: pointer;
+  font-size: 15px;
+  font-weight: 800;
+  color: var(--Verde-principal);           
+  transition: all 0.2s ease-in-out;
+  flex: 1;
+  text-align: center;
+}
+
+.opcao-card input[type="radio"] {
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.opcao-card:hover {
+  border-color: rgb(150, 148, 148);
+}
+
+.opcao-card:has(input[type="radio"]:checked) {
+    background-color: #eaf1ea;
+    border-color: var(--Verde-secundario);
+
+}
+
+.nome-usuario {
+    display: flex;
+    flex-direction: column;
+}
+
+.nome-usuario label {
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+.nome-usuario input {
+    font-weight: 600;
+    background-color: var(--cor-box);
+    padding-block: 14px;
+    padding-inline: 12px;
+    border-radius: 10px;
+    border: 2px solid rgb(224, 222, 222);
+}
+
+.nome-usuario input::placeholder {
+    font-weight: 400;
+    font-size: 1rem;
+    color: rgb(88, 87, 87);
+    
+}
+
+
+.nome-propriedade {
+    display: flex;
+    flex-direction: column;
+}
+
+.nome-propriedade label {
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+.nome-propriedade input {
+    font-weight: 600;
+    background-color: var(--cor-box);
+    padding-block: 14px;
+    padding-inline: 12px;
+    border-radius: 10px;
+    border: 2px solid rgb(224, 222, 222);
+}
+
+.nome-propriedade input::placeholder {
+    font-weight: 400;
+    font-size: 1rem;
+    color: rgb(88, 87, 87);
+    
+}
+
+
+.email-usuario {
+    display: flex;
+    flex-direction: column;
+}
+
+.email-usuario label {
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+.email-usuario input {
+    font-weight: 600;
+    background-color: var(--cor-box);
+    padding-block: 14px;
+    padding-inline: 12px;
+    border-radius: 10px;
+    border: 2px solid rgb(224, 222, 222);
+}
+
+.email-usuario input::placeholder {
+    font-weight: 400;
+    font-size: 1rem;
+    color: rgb(88, 87, 87);
+    
+}
+
+
+.tel-city {
+    display: flex;
+    justify-content: space-between;
+}
+
+
+.tel-usuario {
+    display: flex;
+    flex-direction: column;
+    width: 48%;
+}
+
+.tel-usuario label {
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+.tel-usuario input {
+    font-weight: 600;
+    background-color: var(--cor-box);
+    padding-block: 14px;
+    padding-inline: 12px;
+    border-radius: 10px;
+    border: 2px solid rgb(224, 222, 222);
+    width: 100%
+}
+
+.tel-usuario input::placeholder {
+    font-weight: 400;
+    font-size: 1rem;
+    color: rgb(88, 87, 87);
+    
+}
+
+
+.cidade-usuario {
+    display: flex;
+    flex-direction: column;
+    width: 48%;
+}
+
+.cidade-usuario label {
+    margin-top: 20px;
+    margin-bottom: 10px;
+    
+}
+
+.cidade-usuario input {
+    font-weight: 600;
+    background-color: var(--cor-box);
+    padding-block: 14px;
+    padding-inline: 12px;
+    border-radius: 10px;
+    border: 2px solid rgb(224, 222, 222);
+    
+}
+
+.cidade-usuario input::placeholder {
+    font-weight: 400;
+    font-size: 1rem;
+    color: rgb(88, 87, 87);
+    
+}
+
+
+
+.senha-usuario {
+    display: flex;
+    flex-direction: column;
+}
+
+.senha-usuario label {
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+.senha-usuario input {
+    font-weight: 600;
+    background-color: var(--cor-box);
+    padding-block: 14px;
+    padding-inline: 12px;
+    border-radius: 10px;
+    border: 2px solid rgb(224, 222, 222);
+}
+
+.senha-usuario input::placeholder {
+    font-weight: 400;
+    font-size: 1rem;
+    color: rgb(88, 87, 87);
+    
+}
+
+
+
+
+.confirmar-senha-usuario {
+    display: flex;
+    flex-direction: column;
+}
+
+.confirmar-senha-usuario label {
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+.confirmar-senha-usuario input {
+    font-weight: 600;
+    background-color: var(--cor-box);
+    padding-block: 14px;
+    padding-inline: 12px;
+    border-radius: 10px;
+    border: 2px solid rgb(224, 222, 222);
+}
+
+.confirmar-senha-usuario input::placeholder {
+    font-weight: 400;
+    font-size: 1rem;
+    color: rgb(88, 87, 87);
+    
+}
+
+
+button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    margin-top: 3.5%;
+    padding: 16px;
+    border-radius: 12px;
+    border: none;
+    background-color: var(--Verde-secundario);
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--branco);
+}
+
+.login-p {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    color: gray;
+    text-align: center;
+    
+    
+}
+
+a {
+    text-decoration: none;
+    font-weight: 600;
+    color: var(--Verde-secundario);
+}
+
+
+
+
+
+
+
+
+/*  MEDIA */ 
+
+@media (max-width: 950px) {
+    main {
+        grid-template-columns: 1fr;
+
+    }
+
+    .hero-content h1 {
+    font-size: 2rem;
+       
+    }
+
+    .hero-content li {
+    font-size: .9rem;
+       
+    }
+    .hero {
+        padding: 4rem 1.5rem;
+        min-height: auto;
+    }
+
+    .area-cadastro {
+        padding: 2rem 0.5rem;
+    }
+
+    .area-cadastro h2 {
+    font-size: 1.6rem;
+    
+}
+
+.formulario-cadastro {
+        width: 100%;
+        max-width: 100%; 
+        padding: 1.5rem 1rem; 
+        height: auto;
+}
+
+.opcoes-container {
+        flex-direction: column; 
+        gap: 8px;
+    }
+
+.opcao-card {
+        width: 100%; 
+    }
+
+.tel-city {
+        flex-direction: column;
+        gap: 0;
+    }
+
+.tel-usuario, .cidade-usuario {
+        width: 100%; 
+    }
+
 }

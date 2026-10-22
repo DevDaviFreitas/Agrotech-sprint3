@@ -24,17 +24,17 @@
                     <li>Restaurantes e mercados: encontre fornecedores locais com muito mais facilidade</li>
                     <li>Menos desperdício, mais renda no campo</li>
                 </ul>
-                
+
             </div>
         </div>
 
         <div class="area-cadastro">
             <h2>Cadastrar-se</h2>
-            <p>Os campos com * são obrigatórios</p>
+            <p class="notify">Os campos com * são obrigatórios</p>
 
             <section class="formulario-cadastro">
                 <form action="">
-                    <label for="">Eu sou <span class="obrigatorio">*</span></label>
+                    <label for="" class="label-opcoes-container">Eu sou <span class="obrigatorio">*</span></label>
 
                     <div class="opcoes-container">
 
@@ -58,41 +58,48 @@
 
                     <div class="nome-usuario">
                         <label for="nome-usuario">Seu nome completo <span class="obrigatorio">*</span></label>
-                        <input type="text" name="nome-usuario" id="nome-usuario" required placeholder="Ex: José Carlos Pereira">
+                        <input type="text" name="nome-usuario" id="nome-usuario" required
+                            placeholder="Ex: José Carlos Pereira">
                     </div>
-                    
+
                     <div class="nome-propriedade">
-                        <label for="nome-propriedade">Nome da propriedade<span class="obrigatorio">*</span></label>
-                        <input type="text" name="nome-propriedade" id="nome-propriedade" required placeholder="Ex: Sítio Boa Colheita">
+                        <label for="nome-propriedade">Nome da propriedade <span class="obrigatorio">*</span></label>
+                        <input type="text" name="nome-propriedade" id="nome-propriedade" required
+                            placeholder="Ex: Sítio Boa Colheita">
                     </div>
 
                     <div class="email-usuario">
-                        <label for="email-usuario">E-mail<span class="obrigatorio">*</span></label>
-                        <input type="email" name="email-usuario" id="email-usuario" required placeholder="Ex: voce@exemplo.com">
+                        <label for="email-usuario">E-mail <span class="obrigatorio">*</span></label>
+                        <input type="email" name="email-usuario" id="email-usuario" required
+                            placeholder="Ex: voce@exemplo.com">
                     </div>
+                    <div class="tel-city">
+                        <div class="tel-usuario">
+                            <label for="tel-usuario">Telefone / Whatsapp <span class="obrigatorio">*</span></label>
+                            <input type="tel" name="tel-usuario" id="tel-usuario" required
+                                placeholder="Ex: (99) 99999-9999">
+                        </div>
 
-                    <div class="tel-usuario">
-                        <label for="tel-usuario">Telefone / Whatsapp <span class="obrigatorio">*</span></label>
-                        <input type="tel" name="tel-usuario" id="tel-usuario" required placeholder="Ex: (99) 99999-9999">
+                        <div class="cidade-usuario">
+                            <label for="cidade-usuario">Cidade <span class="obrigatorio">*</span></label>
+                            <input type="text" name="cidade-usuario" id="cidade-usuario" required
+                                placeholder="Ex: Cotia">
+                        </div>
                     </div>
-
-                    <div class="cidade-usuario">
-                        <label for="cidade-usuario">Cidade <span class="obrigatorio">*</span></label>
-                        <input type="text" name="cidade-usuario" id="cidade-usuario" required placeholder="Ex: Cotia">
-                    </div>
-
                     <div class="senha-usuario">
                         <label for="senha-usuario">Senha <span class="obrigatorio">*</span></label>
-                        <input type="password" name="senha-usuario" id="senha-usuario" required minlength="6" placeholder="Mínimo 6 caracteres">
+                        <input type="password" name="senha-usuario" id="senha-usuario" required minlength="6"
+                            placeholder="Mínimo 6 caracteres">
                     </div>
 
                     <div class="confirmar-senha-usuario">
                         <label for="confirmar-senha-usuario">Confirmar Senha <span class="obrigatorio">*</span></label>
-                        <input type="password" name="confirmar-senha-usuario" id="confirmar-senha-usuario" required minlength="6" placeholder="Repita a senha">
+                        <input type="password" name="confirmar-senha-usuario" id="confirmar-senha-usuario" required
+                            minlength="6" placeholder="Repita a senha">
                     </div>
-
+                    
                     <button type="submit">Criar conta</button>
-                    <p>Já tem conta? <a href="">Entrar</a></p>
+                    <p class="login-p">Já tem conta? <a href="login.html">Entrar</a></p>
 
                 </form>
             </section>
