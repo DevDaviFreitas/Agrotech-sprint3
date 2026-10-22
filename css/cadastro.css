@@ -1,0 +1,113 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+:root {
+
+    --Verde-principal: #17391F;
+    --Verde-secundario: #1F5A2E;
+    --Verde-suave: #4D5B4F;
+    --Cor-ERRO: #B3261E;
+    --cor-box: #F8F6EF;
+    --branco: #fff;
+    --Amarelo-destaque: #E0A526;
+    --texto-secundario: #D1E0CE;
+
+
+}
+
+
+header {
+    z-index: 0;
+    background-color: var(--branco);
+    height: 8dvh;
+    display: flex;
+    align-items: center;
+    padding-left: 4.5%;
+    border-bottom: .2px solid var(--Verde-suave);
+    h3 {
+        color: var(--Verde-principal);
+        font-size: 1.8rem;
+    }
+}
+
+main {
+    display: grid;
+    grid-template-columns: repeat(2, 2fr);
+}
+
+.hero {
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100dvh;
+    width: 40dvw;
+    background-color: var(--Verde-principal);
+
+
+}
+
+.hero-content {
+    display: flex;
+    flex-direction: column;
+    text-wrap: balance;
+    padding: 0 2rem;
+    max-width: 700px;
+}
+
+.hero-content h1 {
+    color: var(--branco);
+    font-size: 2.9rem;
+    margin-bottom: 15px;
+}
+
+.hero-content .destaque {
+    color: var(--Amarelo-destaque);
+}
+
+.hero-content li {
+    margin-top: 10px;
+    font-size: 1.1rem;
+    color: var(--texto-secundario);
+}
+
+.hero-content li::marker {
+  color: var(--Amarelo-destaque); 
+}
+
+/* Lado direito da aba cadastro, formulario */
+
+.area-cadastro {
+    padding-top: 7rem;
+    
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    height: 100dvh;
+    width: 59dvw;
+    background-color: var(--cor-box);
+    z-index: 2;
+}
+
+.area-cadastro h2 {
+    color: var(--Verde-principal);
+    font-size: 1.9rem;
+    padding-left: 17rem;
+}
+
+.area-cadastro p {
+    color: gray;
+    padding-left: 17rem;
+}
+
+
+.formulario-cadastro {
+   
+
+    background-color: var(--branco);
+}
