@@ -25,18 +25,97 @@ body {
 
 
 header {
-    z-index: 0;
-    background-color: var(--branco);
-    min-height: 7dvh ;
     display: flex;
     align-items: center;
-    padding-left: 4.5%;
-    border-bottom: 0.1px solid rgb(224, 222, 222);
+    justify-content: space-between;
+    padding: 12px 32px;
+    border-bottom: 1px solid var(--Verde-principal); /* linha verde embaixo */
+}
 
-    h3 {
-        color: var(--Verde-principal);
-        font-size: 1.8rem;
-    }
+.logo {
+    margin-left: 20px;
+    padding: 8px 0;
+    font-size: 30px;
+    font-weight: 700;
+    color: var(--Verde-principal);
+}
+
+.brasil {
+    background: linear-gradient(to right, var(--Amarelo-destaque), rgba(7, 4, 238, 0.5));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+/* Menu */
+.menu {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.menu a {
+    display: block;
+    padding: 8px 18px;
+    border-radius: 8px;
+    color: #222;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.menu a:hover {
+    background: var(--Verde-suave);
+    color: var(--branco);
+}
+
+/* Área dos botões com divisor vertical */
+.acoes {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding-left: 24px;
+    margin-left: 8px;
+    border-left: 1px solid #ddd; /* divisor */
+}
+
+/* Botões */
+.btn {
+    padding: 8px 22px;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: 0.2s;
+}
+
+.btn-contorno {
+    border: 1px solid var(--Verde-principal);
+    color: var(--Verde-suave);
+    background: #fff;
+}
+
+.btn-contorno:hover {
+    background: var(--Verde-suave);
+    color: #fff;
+}
+
+.btn-preenchimento {
+    border: 1px solid var(--Verde-principal);
+    color: var(--branco);
+    background: var(--Verde-suave);
+}
+
+.btn-preenchimento:hover {
+    background: var(--Verde-principal);
 }
 
 main {

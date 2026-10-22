@@ -1,0 +1,389 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+:root {
+
+    --Verde-principal: #17391F;
+    --Verde-secundario: #1F5A2E;
+    --Verde-suave: #4D5B4F;
+    --Cor-ERRO: #B3261E;
+    --cor-box: #F8F6EF;
+    --branco: #fff;
+    --Amarelo-destaque: #E0A526;
+    --texto-secundario: #D1E0CE;
+
+
+}
+
+body {
+    height: 100%;
+}
+
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 12px 32px;
+    border-bottom: 1px solid var(--Verde-principal);
+    /* linha verde embaixo */
+}
+
+.logo {
+    margin-left: 20px;
+    padding: 8px 0;
+    font-size: 30px;
+    font-weight: 700;
+    color: var(--Verde-principal);
+}
+
+.brasil {
+    background: linear-gradient(to right, var(--Amarelo-destaque), rgba(7, 4, 238, 0.5));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+/* Menu */
+.menu {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.menu a {
+    display: block;
+    padding: 8px 18px;
+    border-radius: 8px;
+    color: #222;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.menu a:hover {
+    background: var(--Verde-suave);
+    color: var(--branco);
+}
+
+/* Área dos botões com divisor vertical */
+.acoes {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding-left: 24px;
+    margin-left: 8px;
+    border-left: 1px solid #ddd;
+    /* divisor */
+}
+
+/* Botões */
+.btn {
+    padding: 8px 22px;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: 0.2s;
+}
+
+.btn-contorno {
+    border: 1px solid var(--Verde-principal);
+    color: var(--Verde-suave);
+    background: #fff;
+}
+
+.btn-contorno:hover {
+    background: var(--Verde-suave);
+    color: #fff;
+}
+
+.btn-preenchimento {
+    border: 1px solid var(--Verde-principal);
+    color: var(--branco);
+    background: var(--Verde-suave);
+}
+
+.btn-preenchimento:hover {
+    background: var(--Verde-principal);
+}
+
+
+
+
+
+main {
+    display: grid;
+    grid-template-columns: 4fr 6fr;
+    min-height: calc(100dvh - 7dvh);
+    width: 100%;
+}
+
+.hero {
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+
+    background-color: var(--Verde-principal);
+
+
+}
+
+.hero-content {
+    display: flex;
+    flex-direction: column;
+    text-wrap: balance;
+    padding: 0 2rem;
+    max-width: 700px;
+}
+
+.hero-content h1 {
+    color: var(--branco);
+    font-size: 2.9rem;
+    margin-bottom: 15px;
+}
+
+.bem-vindo {
+    font-weight: 600;
+    color: #83ac7c;
+    margin-bottom: 20px;
+}
+
+.hero-content .destaque {
+    color: var(--Amarelo-destaque);
+}
+
+.hero-content li {
+    margin-top: 10px;
+    font-size: 1.1rem;
+    color: var(--texto-secundario);
+}
+
+.hero-content li::marker {
+    color: var(--Amarelo-destaque);
+}
+
+
+
+
+
+.area-cadastro {
+    padding-top: 1rem;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 4rem 2rem;
+
+    background-color: var(--cor-box);
+    z-index: 2;
+}
+
+.area-cadastro h2,
+.notify {
+    width: 100%;
+    max-width: 650px;
+    text-align: left;
+    margin-left: 0;
+}
+
+.area-cadastro h2 {
+    color: var(--Verde-principal);
+    font-size: 1.9rem;
+
+}
+
+.notify {
+    color: gray;
+
+}
+
+.area-cadastro section {
+    max-width: 650px;
+    width: 100%;
+    margin-top: 2%;
+
+}
+
+
+
+.formulario-cadastro {
+    border: 0.1px solid rgb(224, 222, 222);
+    border-radius: 10px;
+    height: 50%;
+    padding-inline: 4%;
+    padding-block: 3%;
+    background-color: var(--branco);
+    max-width: 650px;
+    width: 100%;
+}
+
+.obrigatorio {
+    color: var(--Cor-ERRO);
+    font-size: 1.1rem;
+}
+
+form {
+
+    height: 100%;
+    width: 100%;
+}
+
+label {
+    color: var(--Verde-secundario);
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+
+
+
+.email-usuario {
+    display: flex;
+    flex-direction: column;
+}
+
+.email-usuario label {
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+.email-usuario input {
+    font-weight: 600;
+    background-color: var(--cor-box);
+    padding-block: 14px;
+    padding-inline: 12px;
+    border-radius: 10px;
+    border: 2px solid rgb(224, 222, 222);
+}
+
+.email-usuario input::placeholder {
+    font-weight: 400;
+    font-size: 1rem;
+    color: rgb(88, 87, 87);
+
+}
+
+
+.senha-usuario {
+    display: flex;
+    flex-direction: column;
+}
+
+.senha-usuario label {
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+.senha-usuario input {
+    font-weight: 600;
+    background-color: var(--cor-box);
+    padding-block: 14px;
+    padding-inline: 12px;
+    border-radius: 10px;
+    border: 2px solid rgb(224, 222, 222);
+}
+
+.senha-usuario input::placeholder {
+    font-weight: 400;
+    font-size: 1rem;
+    color: rgb(88, 87, 87);
+
+}
+
+
+.check-container {
+    display: flex;
+    padding-top: 15px;
+}
+
+.check-container label {
+    font-weight: 400;
+    font-size: 14px;
+    color: gray;
+    padding-left: 10px;
+}
+
+
+.demo {
+    margin-top: 2rem;
+    padding: 1.5rem;
+    background-color: #dcf7dc;
+    max-width: 550px;
+    width: 100%;
+    height: 15%;
+    border-radius: 14px;
+    border: 1px dashed var(--Verde-secundario);
+}
+
+.demo-top {
+    display: flex;
+    gap: 10px;
+}
+
+.demo-title {
+    font-size: 1.1rem;
+}
+
+.demo-bottom {
+    padding-top: 1rem;
+    display: flex;
+    gap: 10px;
+
+    p {
+        color: var(--Verde-principal);
+        font-weight: 500;
+        border: 2px solid var(--Verde-secundario);
+        border-radius: 10px;
+        padding: 8px;
+    }
+}
+
+
+button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    margin-top: 3.5%;
+    padding: 16px;
+    border-radius: 12px;
+    border: none;
+    background-color: var(--Verde-secundario);
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--branco);
+}
+
+
+
+
+.login-p {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    color: gray;
+    text-align: center;
+
+
+}
+
+a {
+    text-decoration: none;
+    font-weight: 600;
+    color: var(--Verde-secundario);
+}
