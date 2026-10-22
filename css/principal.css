@@ -1,0 +1,463 @@
+:root {
+
+    --Verde-principal: #17391F;
+    --Verde-secundario:#1F5A2E;
+    --Verde-suave: #4D5B4F;
+    --Cor-ERRO: #B3261E;
+    --cor-box:#F8F6EF;
+    --branco:#fff;
+    --Amarelo-destaque: #E0A526;
+    --Cor-fundo: #ccd1cc;
+    --cor-passos: #495f40;
+    --cor-passos-texto: #b7e4c7;
+
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    font-family: 'Inter', sans-serif;
+    margin: 0;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 12px 32px;
+    border-bottom: 1px solid var(--Verde-principal); /* linha verde embaixo */
+}
+
+.logo {
+    margin-left: 20px;
+    padding: 8px 0;
+    font-size: 30px;
+    font-weight: 700;
+    color: var(--Verde-principal);
+}
+
+.brasil {
+    background: linear-gradient(to right, var(--Amarelo-destaque), rgba(7, 4, 238, 0.5));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+/* Menu */
+.menu {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.menu a {
+    display: block;
+    padding: 8px 18px;
+    border-radius: 8px;
+    color: #222;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.menu a:hover {
+    background: var(--Verde-suave);
+    color: var(--branco);
+}
+
+/* Área dos botões com divisor vertical */
+.acoes {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding-left: 24px;
+    margin-left: 8px;
+    border-left: 1px solid #ddd; /* divisor */
+}
+
+/* Botões */
+.btn {
+    padding: 8px 22px;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: 0.2s;
+}
+
+.btn-contorno {
+    border: 1px solid var(--Verde-principal);
+    color: var(--Verde-suave);
+    background: #fff;
+}
+
+.btn-contorno:hover {
+    background: var(--Verde-suave);
+    color: #fff;
+}
+
+.btn-preenchimento {
+    border: 1px solid var(--Verde-principal);
+    color: var(--branco);
+    background: var(--Verde-suave);
+}
+
+.btn-preenchimento:hover {
+    background: var(--Verde-principal);
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: start;
+    gap: 64px;
+    background: var(--Verde-principal);
+    padding: 64px 96px;
+}
+
+.btn-produtos {
+    margin-top: 20px;
+    padding: 10px;
+    border: 1px solid var(--Amarelo-destaque);
+    border-radius: 8px;
+    color: var(--Verde-principal);
+    background: var(--Amarelo-destaque);
+}
+
+.btn-produtos:hover {
+    background: var(--Verde-principal);
+    color: var(--Amarelo-destaque);
+}
+
+
+.ods {
+    font-size: 10px;
+    margin-bottom: 16px;
+    color: #7eb77f;
+}
+
+.titulo {
+    font-size: 50px;
+    color: var(--branco);
+}
+
+span {
+    color: var(--Amarelo-destaque);
+}
+
+.exemplo {
+    font-size: 16px;
+    color: var(--branco);
+    margin-top: 10px;
+    
+}
+
+.card-container {
+   text-align: center;
+}
+
+.card-produto {
+    display:grid;
+    grid-template-columns: 1fr;
+    align-items: start;
+    background: var(--cor-box);
+    border-radius: 8px;
+    padding: 16px;
+}
+
+.produtor {
+    font-weight: 600;
+    font-size: 16px;
+    color: var(--Verde-suave);
+}
+
+.selo {
+    font-size: 12px;
+    padding: 4px 12px;
+    border-radius: 30px;
+    background-color: #E0A526;
+    color: var(--Verde-principal)
+}
+    
+.card-topo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 8px;
+}
+
+.produto-nome {
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 8px;
+    color: var(--Verde-suave);
+}
+
+.produto-descricao {
+    font-size: 14px;
+    color: var(--Verde-suave);
+    margin-bottom: 8px;
+    color: var(--Verde-suave);
+}
+
+.produto-info {
+    margin-bottom: 8px;
+    color: var(--Verde-suave);
+}
+
+.info-linha {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 4px;
+    color: var(--Verde-suave);
+}
+
+.info-linha dt {
+    font-weight: 600;
+}
+
+.info-linha dd {
+    text-align: right;
+}
+
+.btn-interesse {
+    padding: 8px 22px;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 600;
+    background: var(--Verde-suave);
+    text-decoration: none;
+    color: var(--branco);
+    text-align: center;
+}
+
+.legenda {
+    font-size: 14px;
+    color: #7eb77f;
+    margin-top: 16px;
+}
+
+@media (max-width: 800px) {
+    .hero {
+        grid-template-columns: 1fr;
+        padding: 40px 24px;
+    }
+
+    .hero h2 {
+        font-size: 40px;
+    }
+}
+
+h1,h2,h3,h4 {
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Quem esta perto de voce */
+
+
+.container2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 5rem;
+}
+
+.solucao-principal-container {
+    text-align: center;
+}
+
+.solucao-principal {
+    margin-bottom: 20px;
+    color: var(--Verde-suave);
+}
+
+.solucao-principal-titulo {
+    margin-bottom: 20px;
+    font-size: 40px;
+}
+
+.solucao-principal-descricao {
+    font-size: 16px;
+    color: var(--Verde-suave);
+}
+
+.produtores-perto {
+    margin-top: 30px;
+}
+
+.produtores-perto-descricao {
+    margin-top: 10px;
+}
+
+.container3 {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    margin-top: 5rem;
+}
+
+.list {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    gap: 18px;
+    max-width: 860px;
+}
+
+.card {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    padding: 20px 22px;
+    background: var(--cor-box);
+    border: 1px solid var(--Verde-suave);
+    border-radius: 7px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.distancia {
+    flex: 0 0 72px;
+    height: 78px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: var(--Cor-fundo);
+    border-radius: 7px;
+    color: var(--Verde-suave);
+}
+
+.distancia strong {
+    font-family: "Poppins", sans-serif;
+    font-size: 27px;
+    line-height: 1;
+}
+
+.distancia span {
+    margin-top: 6px;
+    font-size: 14px;
+}
+
+.info h3 {
+    margin-bottom: 10px;
+}
+
+.tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.tag {
+    margin-top: 10px;
+    background: var(--Cor-fundo);
+    color: var(--Verde-suave);
+    font-size: 12px;
+    padding: 4px 15px;
+    border-radius: 20px;
+}
+
+.btn {
+    margin-left: auto;
+    padding: 10px;
+    border: 1px solid var(--Verde-principal);
+    color: var(--Cor-fundo);
+    background: var(--Verde-principal);
+}
+
+.btn:hover {
+    background: var(--Cor-fundo);
+    color: var(--Verde-principal);
+}
+
+/* Tres passos */
+
+.tres-passos {
+    display: flex;
+    justify-content: center;
+    padding: 5rem;
+    margin-top: 3rem;
+    background: var(--Verde-principal);
+}
+
+.passo {
+    width: 100%;
+    max-width: 780px;
+    margin: 0 20px;
+}
+
+.passo-titulo {
+    margin-bottom: 12px;
+    font-family: "Poppins", sans-serif;
+    font-size: 11px;
+    color: #b7e4c7;
+}
+
+.titulo-passos {
+    margin-bottom: 24px;
+    color: #b7e4c7;
+    font-family: "Poppins", sans-serif;
+}    
+
+
+.passos-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+}
+
+.card-passos {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 20px;
+    background: var(--cor-box);
+    border: 1px solid var(--Verde-suave);
+    border-radius: 7px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 1);
+}
+
+.card-passos strong {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 30px;
+    height: 30px;
+    font-family: "Poppins", sans-serif;
+    font-size: 12px;
+    background: var(--Verde-suave);
+    color: var(--branco);
+    border-radius: 50%;
+}
+
+
+/* Footer */
+
+footer {
+    text-align: center;
+    margin-top: 50rem;
+    padding: 20px;
+    background-color: var(--cor-box);
+    color: var(--Verde-suave);
+}
+
+.aviso {
+    text-align: center;
+    margin-top: 40px;
+    color: var(--Verde-suave);
+    font-size: 12px;
+}

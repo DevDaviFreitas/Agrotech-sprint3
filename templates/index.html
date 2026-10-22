@@ -1,23 +1,188 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Agrotech</title>
 
-    <link rel="stylesheet" href="/css/styles.css">
-    
+    <link rel="stylesheet" href="../css/principal.css">
+
 </head>
+
 <body>
-    <header>
-        <h1>Agrotech</h1>
-        <nav>
-            <ul>
-                <li><a href="/">Home</a></li>
-                <li><a href="/about">About</a></li>
-                <li><a href="/contact">Contact</a></li>
+    <header class="header">
+        <h1 class="logo">AGROTECH | <span class="brasil">BRASIL</span></h1>
+        <nav class="nav">
+            <ul class="menu">
+                <li><a href="#" class="ativo">Principal</a></li>
+                <li><a href="#">Produtos</a></li>
+                <li><a href="#">Fale Conosco</a></li>
             </ul>
+
+            <div class="acoes">
+                <a href="#" class="btn btn-contorno">Entrar</a>
+                <a href="#" class="btn btn-preenchimento">Cadastrar-se</a>
+            </div>
         </nav>
     </header>
+
+    <main class="container">
+
+        <div>
+            <p class="ods">ODS - META 2.3 - FOME ZERO </p>
+            <h2 class="titulo">Do campo direto <br>para a <span>cozinha</span>.</h2>
+            <p class="exemplo">Produtores encontram restaurantes e mercados da região.</p>
+            <p class="exemplo">Restaurante e mercados encontram produtores por perto.</p>
+            <button class="btn-produtos">Ver produtos</button>
+        </div>
+
+        <section class="card-container">
+            <article class="card-produto">
+                <div class="card-topo">
+                    <span class="produtor">Sitio Boa Colheita</span>
+                    <span class="selo">Excedente</span>
+                </div>
+
+                <h3 class="produto-nome">Tomate</h3>
+                <p class="produto-descricao">Colheita de hoje · Retirada na região</p>
+
+                <dl class="produto-info">
+                    <div class="info-linha">
+                        <dt>Quantidade</dt>
+                        <dd>120 kg</dd>
+                    </div>
+                    <div class="info-linha">
+                        <dt>Preço</dt>
+                        <dd>R$ 3,50 / kg</dd>
+                    </div>
+                    <div class="info-linha">
+                        <dt>Disponível</dt> <!-- Sempre vem antes do <dd> Fica a dica -->
+                        <dd>2 dias</dd>
+                    </div>
+                </dl>
+
+                <p class="btn-interesse">Tenho interesse</p>
+            </article>
+
+            <p class="legenda">Exemplo ilustrativo da plataforma</p>
+        </section>
+    </main>
+
+    <main class="container2">
+        <div class="solucao-principal-container">
+            <p class="solucao-principal">Solução principal</p>
+            <h2 class="solucao-principal-titulo">Quem está perto de você</h2>
+            <p class="solucao-principal-descricao">O produtor encontra restaurante e mercados que compram na região.
+                Restaurantes e <br>mercados encontram produtores próximos, com o que está disponível agora.</p>
+            <h3 class="produtores-perto">Produtores perto de você</h3>
+            <p class="produtores-perto-descricao">Veja quem produz na sua região e o que está disponível.</p>
+        </div>
+    </main>
+
+    <main class="container3">
+        <div class="list">
+            <div class="card">
+                <div class="distancia">
+                    <strong>9</strong>
+                    <span>km</span>
+                </div>
+                <div class="info">
+                    <h3>Recanto verde</h3>
+                    <p class="cidade">Itapevi</p>
+                    <div class="tags">
+                        <span class="tag">Pepino</span>
+                        <span class="tag">Pimentão</span>
+                        <span class="tag">Abobrinha</span>
+                    </div>
+                </div>
+                <button class="btn">Ver produtos</button>
+            </div>
+
+            <div class="card">
+                <div class="distancia">
+                    <strong>12</strong>
+                    <span>km</span>
+                </div>
+                <div class="info">
+                    <h3>Recanto verde</h3>
+                    <p class="cidade">Itapevi</p>
+                    <div class="tags">
+                        <span class="tag">Pepino</span>
+                        <span class="tag">Pimentão</span>
+                        <span class="tag">Abobrinha</span>
+                    </div>
+                </div>
+                <button class="btn">Ver produtos</button>
+            </div>
+
+            <div class="card">
+                <div class="distancia">
+                    <strong>18</strong>
+                    <span>km</span>
+                </div>
+                <div class="info">
+                    <h3>Recanto verde</h3>
+                    <p class="cidade">Itapevi</p>
+                    <div class="tags">
+                        <span class="tag">Pepino</span>
+                        <span class="tag">Pimentão</span>
+                        <span class="tag">Abobrinha</span>
+                    </div>
+                </div>
+                <button class="btn">Ver produtos</button>
+            </div>
+
+            <div class="card">
+                <div class="distancia">
+                    <strong>27</strong>
+                    <span>km</span>
+                </div>
+                <div class="info">
+                    <h3>Recanto verde</h3>
+                    <p class="cidade">Itapevi</p>
+                    <div class="tags">
+                        <span class="tag">Pepino</span>
+                        <span class="tag">Pimentão</span>
+                        <span class="tag">Abobrinha</span>
+                    </div>
+                </div>
+                <button class="btn">Ver produtos</button>
+            </div>
+        </div>
+    </main>
+    <p class="aviso">Estabelecimentos e distâncias fictícios, apenas para demonstração do protótipo.</p>
+
+    <section class="tres-passos">
+        <article class="passo">
+            <p class="passo-titulo">COMO FUNCIONA</p>
+            <h2 class="titulo-passos">Três passos, sem complicação</h2>
+
+                <div class="passos-container">
+                    <div class="card-passos">
+                        <strong>1</strong>
+                        <h3>O produtor anuncia</h3>
+                        <p>Informa produto,quantidade, preço e por quanto tempo está disponível.</p>
+                    </div>
+
+                    <div class="card-passos">
+                        <strong>2</strong>
+                        <h3>O consumidor compra</h3>
+                        <p>Escolhe o produto desejado, verifica a disponibilidade e realiza a compra.</p>
+                    </div>
+                    <div class="card-passos">
+                        <strong>3</strong>
+                        <h3>O produto é entregue</h3>
+                        <p>O produto é entregue no local combinado, garantindo frescor e qualidade.</p>
+                    </div>
+                </div>
+        </article>
+    </section>
+
+
+    <footer>
+        <p>&copy; 2026 Agrotech | BRASIL. Todos os direitos reservados.</p>
+    </footer>
 </body>
+
 </html>
