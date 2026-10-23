@@ -98,6 +98,26 @@ nav {
     transition: 0.2s;
 }
 
+.btn-produtores {
+    display: block;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+    padding: 10px;
+    width: 50%;
+    border: 1px solid var(--Amarelo-destaque);
+    border-radius: 8px;
+    color: var(--Verde-principal);
+    background: var(--Amarelo-destaque);
+}
+
+.btn-produtores:hover {
+    background: var(--Verde-principal);
+    color: var(--Amarelo-destaque);
+}
+
+
 .btn-contorno {
     border: 1px solid var(--Verde-principal);
     color: var(--Verde-suave);
