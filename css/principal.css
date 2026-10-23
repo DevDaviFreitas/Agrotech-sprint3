@@ -447,17 +447,75 @@ h1,h2,h3,h4 {
 
 /* Footer */
 
-footer {
-    text-align: center;
-    margin-top: 50rem;
-    padding: 20px;
-    background-color: var(--cor-box);
-    color: var(--Verde-suave);
-}
 
 .aviso {
     text-align: center;
     margin-top: 40px;
     color: var(--Verde-suave);
     font-size: 12px;
+}
+
+footer {
+    text-align: center;
+    margin-top: 0;
+    padding: 35px 20px;
+    background-color: #17391F;
+    color: #FFFFFF;
+}
+
+footer h3 {
+    font-size: 24px;
+    margin-bottom: 12px;
+    color: #FFFFFF;
+}
+
+footer p {
+    font-size: 14px;
+    margin-bottom: 10px;
+    color: #E6F0E2;
+}
+
+/* Seção Video */
+
+.pitch {
+    background-color:#E6F0E2;
+    padding: 70px 6%;;
+}
+
+.pitch-label {
+    font-size: 14px;
+    font-weight: 700;
+    color: #1F5A2E;
+    margin-bottom: 16px;
+}
+
+.pitch h2 {
+    font-size: 40px;
+    font-weight: 700;
+    color: #1F5A2E;
+    margin-bottom: 16px;
+}
+
+.pitch-descricao {
+    font-size: 18px;
+    color: #526052;
+    margin-bottom: 28px;
+}
+
+.pitch-video {
+    width: 85%;
+    height: 500px;
+    background-color: #17391F;
+    border: 5px solid #1F5A2E;
+    border-radius: 12px;
+    margin: 40px auto 0;
+    overflow: hidden;
+}
+
+.pitch-video iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+    border-radius: 8px;
+    display: block;
 }
