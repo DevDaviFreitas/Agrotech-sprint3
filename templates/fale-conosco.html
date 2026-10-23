@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fale Conosco</title>
+    <link rel="stylesheet" href="../css/faleconosco.css">
+</head>
+
+<body>
+    <header class="header">
+        <h1 class="logo">AGROTECH | <span class="brasil">BRASIL</span></h1>
+        <nav class="nav">
+            <ul class="menu">
+                <li><a href="./index.html" class="ativo">Principal</a></li>
+                <li><a href="./produtos.html">Produtos</a></li>
+                <li><a href="./faleConosco.html" class="ativo">Fale Conosco</a></li>
+            </ul>
+
+            <div class="acoes">
+                <a href=".login.html" class="btn btn-contorno">Entrar</a>
+                <a href="#" class="btn btn-preenchimento">Cadastrar-se</a>
+            </div>
+        </nav>
+    </header>
+
+    <section class="banner">
+        <h1>Fale conosco</h1>
+        <p>Produtor, restaurante, mercado ou professor: sua mensagem é bem-vinda.</p>
+    </section>
+
+    <main class="conteudo">
+        <section class="formulario">
+            <h2>Envie sua mensagem</h2>
+            <form action="/enviar" method="post">
+                <label for="nome">Nome completo <span>*</span></label>
+                <input type="text" id="nome" name="nome" placeholder="Ex.: José Carlos Pereira" required>
+
+                <label for="email">E-mail <span>*</span></label>
+                <input type="email" id="email" name="email" placeholder="voce@exemplo.com.br" required>
+
+                <label for="telefone">Telefone / WhatsApp</label>
+                <input type="tel" id="telefone" name="telefone" placeholder="(11) 91234-5678">
+                <small>Opcional. Digite só os números, o formato é automático.</small>
+
+                <label for="opcao">Você é <span>*</span></label>
+                <select id="opcao" name="opcao" required>
+                    <option value="">Selecione uma opção</option>
+                    <option value="produtor">Produtor</option>
+                    <option value="restaurante">Restaurante</option>
+                    <option value="mercado">Mercado</option>
+                </select>
+
+                <label for="mensagem">Mensagem <span>*</span></label>
+                <textarea id="mensagem" name="mensagem" rows="3" maxlength="500" placeholder="Conte como podemos ajudar..." required></textarea>
+                <small class="contador">0 / 500</small>
+
+                <label class="aceite">
+                    <input type="checkbox" name="aceite" required>
+                    Concordo em ser contatado(a) sobre este projeto. <span>*</span>
+                </label>
+
+                <button type="submit">Enviar mensagem</button>
+            </form>
+        </section>
+
+        <aside class="lateral">
+            <section class="card">
+                <h3>Sobre o projeto</h3>
+                <p>AGROTECH é uma proposta acadêmica desenvolvida no PBL "Desafio contra a Fome" (ODS 2), na FIAP.</p>
+            </section>
+            <section class="card">
+                <h3>Quem pode participar</h3>
+                <ul>
+                    <li>Produtores da agricultura familiar</li>
+                    <li>Restaurantes e mercados locais</li>
+                    <li>Interessados em apoiar a iniciativa</li>
+                </ul>
+            </section>
+            <section class="card">
+                <h3>Campos obrigatórios</h3>
+                <p>Os campos marcados com * precisam ser preenchidos corretamente antes do envio.</p>
+            </section>
+        </aside>
+    </main>
+
+    <section class="informacoes">
+        <h2>QUEM SOMOS</h2>
+        <h3>Squad The Future is Now</h3>
+        <p>Estudantes de Engenharia de Software da FIAP, reunidos no desafio PBL contra a Fome.</p>
+
+        <ul class="equipe">
+            <li class="integrante">
+                <section class="iniciais">VR</section>
+                <h4>Victor S A Rodrigues</h4>
+                <p>RM 575319</p>
+            </li>
+            <li class="integrante">
+                <section class="iniciais">GS</section>
+                <h4>Gustavo A L da Silva</h4>
+                <p>RM 576551</p>
+            </li>
+            <li class="integrante">
+                <section class="iniciais">DS</section>
+                <h4>Davi Freitas da Silva</h4>
+                <p>RM 574607</p>
+            </li>
+            <li class="integrante">
+                <section class="iniciais">LR</section>
+                <h4>Leonardo Raizel</h4>
+                <p>RM 576196</p>
+            </li>
+            <li class="integrante">
+                <section class="iniciais">HS</section>
+                <h4>Hebert W F da Silva</h4>
+                <p>RM 575277</p>
+            </li>
+        </ul>
+    </section>
+
+    <footer>
+        <h3>AgroTech</h3>
+
+        <p>Conectando produtores e consumidores</p>
+        
+        <p>&copy; 2026 Agrotech | BRASIL. Todos os direitos reservados.</p>
+    </footer>
+</body>
+</html>
