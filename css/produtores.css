@@ -86,6 +86,16 @@ nav {
     margin-top: 22px;
 }
 
+.produto-titulo2 {
+    font-size: 44px;
+    padding: 16px 0;
+    color: var(--branco);
+    font-weight: bold;
+    margin-bottom: 2px;
+    margin-left: 72px;
+    margin-top: 22px;
+}
+
 .produto-descricao {
     color: var(--cor-passos-texto);
     margin-left: 72px;
@@ -143,3 +153,297 @@ nav {
     color: var(--branco);
 }
 
+/* ----------------------- Cards de Destaque ----------------------- */
+.produto-titulo {
+    margin-left: 72px;
+    margin-top: 22px;
+    color: var(--Verde-secundario);
+}
+
+.descricao-destaque {
+    color: var(--Verde-secundario);
+    margin-left: 72px;
+}
+
+.grid-destaques {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 16px;
+    margin-left: 72px;
+    margin-top: 72px;
+    margin-right: 72px;
+}
+
+.card-destaque {
+    background: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+    min-width: 0;         /* evita estourar a coluna */
+}
+
+.foto {
+    position: relative;
+}
+
+.foto img {
+    width: 100%; 
+    height: 160px; 
+    object-fit: cover; 
+    display: block;
+}
+
+.selo {
+    position: absolute; top: 8px; left: 8px;
+    background: #f0d96b; font-size: 11px;
+    padding: 2px 8px; border-radius: 999px;
+}
+
+.info { 
+    padding: 14px; 
+}
+
+.linha { 
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    gap: 8px;
+}
+
+.preco { 
+    font-size: 22px; 
+    color: #1f5a36; 
+}
+
+.prazo {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+ion-icon {
+   font-size: 15px;
+   vertical-align: middle;
+}
+
+
+@media (max-width: 800px) {
+  .grid-destaques { grid-template-columns: 1fr; }
+}
+
+/* ----------------------- Filtro de Distância ----------------------- */
+
+.filtros {
+    display: flex;
+    align-items: flex-end;
+    gap: 24px;
+    margin: 0 auto;
+    margin-top: 54px;
+    width: 50%;
+    flex-wrap: wrap;
+    background: #fff;
+    border-radius: 12px;
+    padding: 20px 24px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.88);
+}
+
+.campo {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.campo label {
+    font-size: 12px;
+    font-weight: 600;
+    color: #222;
+}
+
+/* Busca e selects */
+.campo input[type="search"],
+.campo select {
+    height: 40px;
+    padding: 0 12px;
+    font-size: 13px;
+    font-family: inherit;
+    color: #333;
+    background-color: #faf6e9;
+    border: 1px solid #e8e4d8;
+    border-radius: 8px;
+    outline: none;
+}
+
+.campo input:focus,
+.campo select:focus {
+    border-color: #1f5a36;
+}
+
+/* Busca com ícone */
+.campo-busca { 
+    width: 230px; 
+    flex-shrink: 0;
+}
+
+.campo-busca .input-icone {
+    position: relative;
+    width: 100%;
+}
+
+.campo-busca .input-icone ion-icon {
+    position: absolute;
+    left: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 16px;
+    color: #555;
+    pointer-events: none;
+}
+
+.campo-busca .input-icone input {
+    width: 100%;
+    box-sizing: border-box;  /* padding entra no cálculo da largura */
+    padding-left: 38px;      /* abre espaço para a lupa */
+}
+
+.input-icone { 
+    position: relative; 
+}
+
+.input-icone ion-icon {
+    position: absolute;
+    left: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 16px;
+    color: #555;
+    pointer-events: none;
+}
+
+.input-icone input {
+    width: 100%;
+    padding-left: 36px;
+}
+
+/* Selects com seta personalizada */
+.campo select {
+    width: 190px;
+    -webkit-appearance: none;
+    appearance: none;
+    cursor: pointer;
+    padding-right: 32px;
+    text-overflow: ellipsis;
+    background-repeat: no-repeat;
+    background-position: right 12px center;
+}
+
+/* Slider */
+.campo-slider { width: 190px; }
+
+.campo-slider .topo {
+    display: flex;
+    justify-content: space-between;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.campo-slider .topo label { font-size: 12px; }
+
+.campo-slider output { color: #1f5a36; }
+
+#distancia {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 100%;
+    height: 4px;
+    margin: 14px 0;
+    border-radius: 999px;
+    outline: none;
+    cursor: pointer;
+    background: linear-gradient(to right, #1f5a36 var(--valor, 60%), #ddd var(--valor, 60%));
+}
+
+#distancia::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    background: #1f5a36;
+}
+
+#distancia::-moz-range-thumb {
+    width: 14px;
+    height: 14px;
+    border: 0;
+    border-radius: 50%;
+    background: #1f5a36;
+}
+
+/* Checkbox */
+.check {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    height: 40px;
+    font-size: 13px;
+    cursor: pointer;
+}
+
+.check input {
+    width: 16px;
+    height: 16px;
+    accent-color: #1f5a36;
+    cursor: pointer;
+}
+
+/* -------- Resultado -------- */
+
+.main-resultado {
+    margin: 50px;
+    margin-top: 40px;
+    
+    padding: 20px;
+}
+
+.resultado {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 40px;
+    font-size: 16px;
+    color: #333;
+}
+
+.titulo2 {
+    color: var(--Verde-secundario)
+}
+
+.descricao2 {
+    color: var(--cor-passos);
+}
+/* ----------------------- Footer ----------------------- */
+
+.aviso {
+    text-align: center;
+    margin-top: 40px;
+    color: var(--Verde-suave);
+    font-size: 12px;
+}
+
+footer {
+    text-align: center;
+    margin-top: 500px;
+    padding: 35px 20px;
+    background-color: #17391F;
+    color: #FFFFFF;
+}
+
+footer h3 {
+    font-size: 24px;
+    margin-bottom: 12px;
+    color: #FFFFFF;
+}
+
+footer p {
+    font-size: 14px;
+    margin-bottom: 10px;
+    color: #E6F0E2;
+}
