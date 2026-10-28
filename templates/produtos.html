@@ -24,7 +24,7 @@
     </header>
     <main class="container">
         <section class="produtos">
-            <h2 class="produto-titulo">Produtos</h2>
+            <h2 class="produto-titulo2">Produtos</h2>
             <p class="produto-descricao">Alimentos frescos de produtores da região. Filtre por distância, categoria e
                 preço.</p>
         </section>
@@ -41,6 +41,149 @@
             <a href="./cadastro.html" class="btn btn-secundario">Criar conta</a>
         </div>
     </div>
+
+    <h2 class="produto-titulo">Excedentes em destaque</h2>
+    <p class="descricao-destaque">Confira os produtos em excesso que estão disponíveis para compra.</p>
+
+    <div class="grid-destaques">
+        <article class="card-destaque">
+            <div class="foto">
+                <img src="../imagens/Tomate.jpg" alt="Tomate">
+                <span class="selo">Excedente</span>
+            </div>
+            <div class="info">
+                <div class="linha">
+                    <h3 class="nome-tomate">Tomate</h3>
+                    <span class="distancia">12 km</span>
+                </div>
+                <p class="prudutor">Sitio boa Colheita · Cotia</p>
+                <div class="linha">
+                    <strong class="preco">R$ 3,50 <small>/ kg</small></strong>
+                    <span class="prazo"><ion-icon name="time-outline"></ion-icon>Disponivel 2 dias</span>
+                </div>
+            </div>
+        </article>
+
+        <article class="card-destaque">
+            <div class="foto">
+                <img src="../imagens/Tomate.jpg" alt="Tomate">
+                <span class="selo">Excedente</span>
+            </div>
+            <div class="info">
+                <div class="linha">
+                    <h3 class="nome-tomate">Tomate</h3>
+                    <span class="distancia">12 km</span>
+                </div>
+                <p class="prudutor">Sitio boa Colheita · Cotia</p>
+                <div class="linha">
+                    <strong class="preco">R$ 3,50 <small>/ kg</small></strong>
+                    <span class="prazo"><ion-icon name="time-outline"></ion-icon>Disponivel 2 dias</span>
+                </div>
+            </div>
+        </article>
+
+        <article class="card-destaque">
+            <div class="foto">
+                <img src="../imagens/Tomate.jpg" alt="Tomate">
+                <span class="selo">Excedente</span>
+            </div>
+            <div class="info">
+                <div class="linha">
+                    <h3 class="nome-tomate">Tomate</h3>
+                    <span class="distancia">12 km</span>
+                </div>
+                <p class="prudutor">Sitio boa Colheita · Cotia</p>
+                <div class="linha">
+                    <strong class="preco">R$ 3,50 <small>/ kg</small></strong>
+                    <span class="prazo"><ion-icon name="time-outline"></ion-icon>Disponivel 2 dias</span>
+                </div>
+            </div>
+        </article>
+
+        <article class="card-destaque">
+            <div class="foto">
+                <img src="../imagens/Tomate.jpg" alt="Tomate">
+                <span class="selo">Excedente</span>
+            </div>
+            <div class="info">
+                <div class="linha">
+                    <h3 class="nome-tomate">Tomate</h3>
+                    <span class="distancia">12 km</span>
+                </div>
+                <p class="prudutor">Sitio boa Colheita · Cotia</p>
+                <div class="linha">
+                    <strong class="preco">R$ 3,50 <small>/ kg</small></strong>
+                    <span class="prazo"><ion-icon name="time-outline"></ion-icon>Disponivel 2 dias</span>
+                </div>
+            </div>
+        </article>
+    </div>
+
+    <form class="filtros">
+
+        <div class="campo campo-busca">
+            <label for="busca">Busca</label>
+            <div class="input-icone">
+                <ion-icon name="search-outline"></ion-icon>
+                <input type="search" id="busca" placeholder="Produto, produtor ou cidade">
+            </div>
+        </div>
+
+        <div class="campo">
+            <label for="categoria">Categoria</label>
+            <select id="categoria">
+                <option value="">Selecione a categoria</option>
+                <option value="tomate">Tomate</option>
+                <option value="alface">Alface</option>
+                <option value="cenoura">Cenoura</option>
+            </select>
+        </div>
+
+        <div class="campo">
+            <label for="ordem">Ordenar por</label>
+            <select id="ordem">
+                <option value="">Selecione a ordem</option>
+                <option value="preco-asc">Preço crescente</option>
+                <option value="preco-desc">Preço decrescente</option>
+                <option value="distancia-asc">Distância crescente</option>
+                <option value="distancia-desc">Distância decrescente</option>
+            </select>
+        </div>
+
+        <div class="campo campo-slider">
+            <div class="topo">
+                <label for="distancia">Distância até</label>
+                <output id="distOut">60 km</output>
+            </div>
+            <input type="range" id="distancia" min="5" max="100" value="60">
+        </div>
+
+        <label class="check">
+            <input type="checkbox" id="soExcedentes">
+            <span>Somente excedentes</span>
+        </label>
+    </form>
+
+    <main class="main-resultado">
+        <div class="resultado">
+            <h3 class="titulo2">6 produtos encontrados</h3>
+            <p class="descricao2">Alimentos de produtores da região.</p>
+        </div>
+    </main>
+
+
+
+    <script type="module" src="https://unpkg.com/ionicons@8.0.13/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@8.0.13/dist/ionicons/ionicons.js"></script>
+
+
+    <footer>
+        <h3>AgroTech</h3>
+
+        <p>Conectando produtores e consumidores</p>
+        
+        <p>&copy; 2026 Agrotech | BRASIL. Todos os direitos reservados.</p>
+    </footer>
 </body>
 
 </html>
