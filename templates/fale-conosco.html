@@ -35,13 +35,13 @@
             <h2>Envie sua mensagem</h2>
             <form action="/enviar" method="post">
                 <label for="nome">Nome completo <span>*</span></label>
-                <input type="text" id="nome" name="nome" placeholder="Ex.: José Carlos Pereira" required>
+                <input type="text" id="nome" name="nome" placeholder="Ex.: José Carlos Pereira" maxlength="200" required>
 
                 <label for="email">E-mail <span>*</span></label>
-                <input type="email" id="email" name="email" placeholder="voce@exemplo.com.br" required>
+                <input type="email" id="email" name="email" placeholder="voce@exemplo.com.br" maxlength="200" required>
 
                 <label for="telefone">Telefone / WhatsApp</label>
-                <input type="tel" id="telefone" name="telefone" placeholder="(11) 91234-5678">
+                <input type="tel" id="telefone" name="telefone" placeholder="(11) 91234-5678" maxlength="200">
                 <small>Opcional. Digite só os números, o formato é automático.</small>
 
                 <label for="opcao">Você é <span>*</span></label>
