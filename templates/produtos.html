@@ -1,188 +1,298 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-
+ 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Produtores</title>
-
+    <title>Produtos | Agrotech | BRASIL</title>
     <link rel="stylesheet" href="../css/styles.css">
     <link rel="stylesheet" href="../css/produtores.css">
-
 </head>
-
+ 
 <body>
+    <!--  Cabeçalho  -->
     <header class="header">
         <h1 class="logo">AGROTECH | <span class="brasil">BRASIL</span></h1>
         <nav class="nav">
             <ul class="menu">
-                <li><a href="./index.html" class="ativo">Principal</a></li>
-                <li><a href="./fale-conosco.html">Fale Conosco</a></li>
+                <li><a href="index.html">Principal</a></li>
+                <li><a href="fale-conosco.html">Fale Conosco</a></li>
             </ul>
         </nav>
     </header>
-    <main class="container">
-        <section class="produtos">
-            <h2 class="produto-titulo2">Produtos</h2>
-            <p class="produto-descricao">Alimentos frescos de produtores da região. Filtre por distância, categoria e
-                preço.</p>
+
+    <section class="topo">
+            <h1 class="topo-titulo">Produtos</h1>
+            <p class="topo-descricao">Alimentos frescos de produtores da região. Filtre por distância, categoria e preço.</p>
+    </section>
+ 
+    <!-- ===== Aviso de login ===== -->
+    <section class="aviso">
+        <div class="aviso-conteudo">
+            <div class="aviso-icone">
+                <ion-icon name="people-outline"></ion-icon>
+            </div>
+            <div class="aviso-texto">
+                <strong>Quer demonstrar interesse ou anunciar?</strong>
+                <span>Entre ou crie sua conta gratuita.</span>
+            </div>
+            <div class="aviso-botoes">
+                <a href="./login.html" class="btn btn-secundario">Entrar</a>
+                <a href="./cadastro.html" class="btn btn-primario">Cadastrar-se</a>
+            </div>
+        </div>
+    </section>
+ 
+    <main class="pagina">
+        <!-- ===== Excedentes em destaque ===== -->
+        <section class="destaques">
+            <div class="destaques-topo">
+                <div>
+                    <h2 class="secao-titulo">Excedentes em destaque</h2>
+                    <p class="secao-descricao">Bons alimentos, ainda com muito a oferecer. Aproveite enquanto estão disponíveis.</p>
+                </div>
+                <span class="lema">
+                    <ion-icon name="leaf-outline"></ion-icon>
+                    Mais alimento, menos desperdício
+                </span>
+            </div>
+ 
+            <section class="grid-destaques">
+                <article class="card-destaque">
+                    <div class="foto">
+                        <img src="../imagens/Tomate.jpg" alt="Caixa de tomates">
+                        <span class="selo">Excedente</span>
+                    </div>
+                    <section class="info">
+                        <div class="linha">
+                            <h3 class="nome">Tomate</h3>
+                            <span class="distancia">12 km</span>
+                        </div>
+                        <p class="produtor">Sítio Boa Colheita · Cotia</p>
+                        <div class="linha linha-preco">
+                            <strong class="preco">R$ 3,50 <small>/ kg</small></strong>
+                            <span class="prazo"><ion-icon name="time-outline"></ion-icon>Disponível 2 dias</span>
+                        </div>
+                    </section>
+                </article>
+ 
+                <article class="card-destaque">
+                    <div class="foto">
+                        <img src="../imagens/Alface.png" alt="Cesta de alface crespa">
+                        <span class="selo">Excedente</span>
+                    </div>
+                    <section class="info">
+                        <div class="linha">
+                            <h3 class="nome">Alface crespa</h3>
+                            <span class="distancia">12 km</span>
+                        </div>
+                        <p class="produtor">Sítio Boa Colheita · Cotia</p>
+                        <div class="linha linha-preco">
+                            <strong class="preco">R$ 2,00 <small>/ maço</small></strong>
+                            <span class="prazo"><ion-icon name="time-outline"></ion-icon>Disponível 1 dia</span>
+                        </div>
+                    </section>
+                </article>
+ 
+                <article class="card-destaque">
+                    <div class="foto">
+                        <img src="../imagens/Abobrinha.png" alt="Caixa de abobrinha italiana">
+                        <span class="selo">Excedente</span>
+                    </div>
+                    <section class="info">
+                        <div class="linha">
+                            <h3 class="nome">Abobrinha italiana</h3>
+                            <span class="distancia">9 km</span>
+                        </div>
+                        <p class="produtor">Recanto Verde · Itapevi</p>
+                        <div class="linha linha-preco">
+                            <strong class="preco">R$ 3,00 <small>/ kg</small></strong>
+                            <span class="prazo"><ion-icon name="time-outline"></ion-icon>Disponível 2 dias</span>
+                        </div>
+                    </section>
+                </article>
+            </section>
+        </section>
+ 
+        <!-- ===== Filtros + resultados ===== -->
+        <section class="catalogo">
+            <form class="filtros" onsubmit="return false">
+                <div class="campo campo-busca">
+                    <label for="busca">Busca</label>
+                    <div class="input-icone">
+                        
+                        <input type="search" id="busca" placeholder="Produto, produtor ou cidade">
+                    </div>
+                </div>
+ 
+                <div class="campo">
+                    <label for="categoria">Categoria</label>
+                    <select id="categoria">
+                        <option value="">Todas</option>
+                        <option value="legumes">Legumes</option>
+                        <option value="folhas">Folhas</option>
+                        <option value="raizes">Raízes e tubérculos</option>
+                        <option value="ovos">Ovos e laticínios</option>
+                    </select>
+                </div>
+ 
+                <div class="campo">
+                    <label for="ordem">Ordenar por</label>
+                    <select id="ordem">
+                        <option value="distancia-asc">Mais perto</option>
+                        <option value="distancia-desc">Mais longe</option>
+                        <option value="preco-asc">Menor preço</option>
+                        <option value="preco-desc">Maior preço</option>
+                    </select>
+                </div>
+ 
+                <div class="campo campo-slider">
+                    <div class="topo-slider">
+                        <label for="distancia">Distância até</label>
+                        <output id="distOut">60 km</output>
+                    </div>
+                    <input type="range" id="distancia" min="5" max="100" value="60">
+                </div>
+ 
+                <label class="check">
+                    <input type="checkbox" id="soExcedentes">
+                    <span>Só excedentes</span>
+                </label>
+            </form>
+ 
+            <section class="resultado">
+                <h3 class="resultado-titulo">6 produtos encontrados</h3>
+                <p class="resultado-descricao">Alimentos de produtores da região.</p>
+            </section>
+ 
+            <section class="grid-produtos">
+                <article class="card-produto">
+                    <div class="foto">
+                        <img src="../imagens/Tomate.jpg" alt="Caixa de tomates">
+                        <span class="selo">Excedente</span>
+                        <span class="tag">Legumes</span>
+                        <span class="tag tag-excedente">Excedente</span>
+                    </div>
+                    <h3 class="nome">Tomate</h3>
+                    <p class="produtor">Sítio Boa Colheita · Cotia</p>
+                    <dl class="detalhes">
+                        <div><dt>Quantidade</dt><dd>120 kg</dd></div>
+                        <div><dt>Distância</dt><dd>12 km</dd></div>
+                        <div><dt>Disponível</dt><dd>2 dias</dd></div>
+                    </dl>
+                    <strong class="preco">R$ 3,50 <small>/ kg</small></strong>
+                    <button type="button" class="btn-interesse">Tenho interesse</button>
+                </article>
+ 
+                <article class="card-produto">
+                    <div class="foto">
+                        <img src="../imagens/Alface.png" alt="Cesta de alface crespa">
+                        <span class="tag">Folhas</span>
+                        <span class="tag tag-excedente">Excedente</span>
+                    </div>
+                    <h3 class="nome">Alface crespa</h3>
+                    <p class="produtor">Sítio Boa Colheita · Cotia</p>
+                    <dl class="detalhes">
+                        <div><dt>Quantidade</dt><dd>80 maços</dd></div>
+                        <div><dt>Distância</dt><dd>12 km</dd></div>
+                        <div><dt>Disponível</dt><dd>1 dia</dd></div>
+                    </dl>
+                    <strong class="preco">R$ 2,00 <small>/ maço</small></strong>
+                    <button type="button" class="btn-interesse">Tenho interesse</button>
+                </article>
+ 
+                <article class="card-produto">
+                    <div class="foto">
+                        <img src="../imagens/Cenouras.png" alt="Cesta de cenouras">
+                        <span class="tag">Raízes e tubérculos</span>
+                    </div>
+                    <h3 class="nome">Cenoura</h3>
+                    <p class="produtor">Sítio Boa Colheita · Cotia</p>
+                    <dl class="detalhes">
+                        <div><dt>Quantidade</dt><dd>200 kg</dd></div>
+                        <div><dt>Distância</dt><dd>12 km</dd></div>
+                        <div><dt>Disponível</dt><dd>5 dias</dd></div>
+                    </dl>
+                    <strong class="preco">R$ 2,80 <small>/ kg</small></strong>
+                    <button type="button" class="btn-interesse">Tenho interesse</button>
+                </article>
+ 
+                <article class="card-produto">
+                    <div class="foto">
+                        <img src="../imagens/Couve.png" alt="Caixa de couve manteiga">
+                        <span class="tag">Folhas</span>
+                    </div>
+                    <h3 class="nome">Couve manteiga</h3>
+                    <p class="produtor">Horta da Dona Alzira · Vargem Grande Paulista</p>
+                    <dl class="detalhes">
+                        <div><dt>Quantidade</dt><dd>60 maços</dd></div>
+                        <div><dt>Distância</dt><dd>18 km</dd></div>
+                        <div><dt>Disponível</dt><dd>3 dias</dd></div>
+                    </dl>
+                    <strong class="preco">R$ 2,50 <small>/ maço</small></strong>
+                    <button type="button" class="btn-interesse">Tenho interesse</button>
+                </article>
+ 
+                <article class="card-produto">
+                    <div class="foto">
+                        <img src="../imagens/Ovos.png" alt="Caixa de ovos caipiras">
+                        <span class="tag">Ovos e laticínios</span>
+                    </div>
+                    <h3 class="nome">Ovos caipiras</h3>
+                    <p class="produtor">Granja Ovos do Vale · Mairinque</p>
+                    <dl class="detalhes">
+                        <div><dt>Quantidade</dt><dd>100 dúzias</dd></div>
+                        <div><dt>Distância</dt><dd>35 km</dd></div>
+                        <div><dt>Disponível</dt><dd>6 dias</dd></div>
+                    </dl>
+                    <strong class="preco">R$ 12,00 <small>/ dúzia</small></strong>
+                    <button type="button" class="btn-interesse">Tenho interesse</button>
+                </article>
+ 
+                <article class="card-produto">
+                    <div class="foto">
+                        <img src="../imagens/Abobrinha.png" alt="Caixa de abobrinha italiana">
+                        <span class="tag">Legumes</span>
+                        <span class="tag tag-excedente">Excedente</span>
+                    </div>
+                    <h3 class="nome">Abobrinha italiana</h3>
+                    <p class="produtor">Recanto Verde · Itapevi</p>
+                    <dl class="detalhes">
+                        <div><dt>Quantidade</dt><dd>110 kg</dd></div>
+                        <div><dt>Distância</dt><dd>9 km</dd></div>
+                        <div><dt>Disponível</dt><dd>2 dias</dd></div>
+                    </dl>
+                    <strong class="preco">R$ 3,00 <small>/ kg</small></strong>
+                    <button type="button" class="btn-interesse">Tenho interesse</button>
+                </article>
+            </section>
         </section>
     </main>
-
-    <div class="aviso">
-        <p class="aviso-texto">
-            <strong>Quer demonstrar interesse ou anunciar?</strong>
-            Entre ou crie sua conta gratuita.
-        </p>
-
-        <div class="aviso-botoes">
-            <a href="./login.html" class="btn btn-primario">Entrar</a>
-            <a href="./cadastro.html" class="btn btn-secundario">Criar conta</a>
+ 
+    <!-- ===== Rodapé ===== -->
+    <footer class="rodape">
+        <div class="rodape-conteudo">
+            <p>
+                &copy; 2026 Elo do Campo · Protótipo acadêmico. Dados fictícios.<br>
+                PBL: Desafio contra a Fome (ODS 2) · FIAP.
+            </p>
+            <strong class="rodape-marca">Agrotech | BRASIL</strong>
         </div>
-    </div>
-
-    <h2 class="produto-titulo">Excedentes em destaque</h2>
-    <p class="descricao-destaque">Confira os produtos em excesso que estão disponíveis para compra.</p>
-
-    <div class="grid-destaques">
-        <article class="card-destaque">
-            <div class="foto">
-                <img src="../imagens/Tomate.jpg" alt="Tomate">
-                <span class="selo">Excedente</span>
-            </div>
-            <div class="info">
-                <div class="linha">
-                    <h3 class="nome-tomate">Tomate</h3>
-                    <span class="distancia">12 km</span>
-                </div>
-                <p class="prudutor">Sitio boa Colheita · Cotia</p>
-                <div class="linha">
-                    <strong class="preco">R$ 3,50 <small>/ kg</small></strong>
-                    <span class="prazo"><ion-icon name="time-outline"></ion-icon>Disponivel 2 dias</span>
-                </div>
-            </div>
-        </article>
-
-        <article class="card-destaque">
-            <div class="foto">
-                <img src="../imagens/Tomate.jpg" alt="Tomate">
-                <span class="selo">Excedente</span>
-            </div>
-            <div class="info">
-                <div class="linha">
-                    <h3 class="nome-tomate">Tomate</h3>
-                    <span class="distancia">12 km</span>
-                </div>
-                <p class="prudutor">Sitio boa Colheita · Cotia</p>
-                <div class="linha">
-                    <strong class="preco">R$ 3,50 <small>/ kg</small></strong>
-                    <span class="prazo"><ion-icon name="time-outline"></ion-icon>Disponivel 2 dias</span>
-                </div>
-            </div>
-        </article>
-
-        <article class="card-destaque">
-            <div class="foto">
-                <img src="../imagens/Tomate.jpg" alt="Tomate">
-                <span class="selo">Excedente</span>
-            </div>
-            <div class="info">
-                <div class="linha">
-                    <h3 class="nome-tomate">Tomate</h3>
-                    <span class="distancia">12 km</span>
-                </div>
-                <p class="prudutor">Sitio boa Colheita · Cotia</p>
-                <div class="linha">
-                    <strong class="preco">R$ 3,50 <small>/ kg</small></strong>
-                    <span class="prazo"><ion-icon name="time-outline"></ion-icon>Disponivel 2 dias</span>
-                </div>
-            </div>
-        </article>
-
-        <article class="card-destaque">
-            <div class="foto">
-                <img src="../imagens/Tomate.jpg" alt="Tomate">
-                <span class="selo">Excedente</span>
-            </div>
-            <div class="info">
-                <div class="linha">
-                    <h3 class="nome-tomate">Tomate</h3>
-                    <span class="distancia">12 km</span>
-                </div>
-                <p class="prudutor">Sitio boa Colheita · Cotia</p>
-                <div class="linha">
-                    <strong class="preco">R$ 3,50 <small>/ kg</small></strong>
-                    <span class="prazo"><ion-icon name="time-outline"></ion-icon>Disponivel 2 dias</span>
-                </div>
-            </div>
-        </article>
-    </div>
-
-    <form class="filtros">
-
-        <div class="campo campo-busca">
-            <label for="busca">Busca</label>
-            <div class="input-icone">
-                <ion-icon name="search-outline"></ion-icon>
-                <input type="search" id="busca" placeholder="Produto, produtor ou cidade">
-            </div>
-        </div>
-
-        <div class="campo">
-            <label for="categoria">Categoria</label>
-            <select id="categoria">
-                <option value="">Selecione a categoria</option>
-                <option value="tomate">Tomate</option>
-                <option value="alface">Alface</option>
-                <option value="cenoura">Cenoura</option>
-            </select>
-        </div>
-
-        <div class="campo">
-            <label for="ordem">Ordenar por</label>
-            <select id="ordem">
-                <option value="">Selecione a ordem</option>
-                <option value="preco-asc">Preço crescente</option>
-                <option value="preco-desc">Preço decrescente</option>
-                <option value="distancia-asc">Distância crescente</option>
-                <option value="distancia-desc">Distância decrescente</option>
-            </select>
-        </div>
-
-        <div class="campo campo-slider">
-            <div class="topo">
-                <label for="distancia">Distância até</label>
-                <output id="distOut">60 km</output>
-            </div>
-            <input type="range" id="distancia" min="5" max="100" value="60">
-        </div>
-
-        <label class="check">
-            <input type="checkbox" id="soExcedentes">
-            <span>Somente excedentes</span>
-        </label>
-    </form>
-
-    <main class="main-resultado">
-        <div class="resultado">
-            <h3 class="titulo2">6 produtos encontrados</h3>
-            <p class="descricao2">Alimentos de produtores da região.</p>
-        </div>
-    </main>
-
-
-
-    <script type="module" src="https://unpkg.com/ionicons@8.0.13/dist/ionicons/ionicons.esm.js"></script>
-    <script nomodule src="https://unpkg.com/ionicons@8.0.13/dist/ionicons/ionicons.js"></script>
-
-
-    <footer>
-        <h3>AgroTech</h3>
-
-        <p>Conectando produtores e consumidores</p>
-        
-        <p>&copy; 2026 Agrotech | BRASIL. Todos os direitos reservados.</p>
     </footer>
+ 
+    <script>
+        // Atualiza o valor e o preenchimento do slider de distância
+        const slider = document.getElementById('distancia');
+        const saida = document.getElementById('distOut');
+ 
+        function atualizarSlider() {
+            const pct = ((slider.value - slider.min) / (slider.max - slider.min)) * 100;
+            slider.style.setProperty('--valor', pct + '%');
+            saida.textContent = slider.value + ' km';
+        }
+        slider.addEventListener('input', atualizarSlider);
+        atualizarSlider();
+    </script>
 </body>
-
+ 
 </html>
